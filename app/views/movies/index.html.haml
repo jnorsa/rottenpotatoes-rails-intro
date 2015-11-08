@@ -6,7 +6,7 @@
     %tr
       %th Movie Title
       %th Rating
-      %th Release Date
+      %th= link_to "Release Date", movies
       %th More Info
   %tbody
     - @movies.each do |movie|
