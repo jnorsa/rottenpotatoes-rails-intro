@@ -19,7 +19,6 @@ class MoviesController < ApplicationController
       @rating = @all_ratings
     end
     @movies = Movie.order(params[:sortby]).where rating:(@rating)
-        debugger
 
   end
 
