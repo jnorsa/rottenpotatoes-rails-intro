@@ -16,7 +16,11 @@ class MoviesController < ApplicationController
     
     
     if params[:sortby] == nil then
-      @sortby = session[:sortby]
+      if session[:sortby] == nil then
+        @sortby = ""
+      else
+        @sortby = session[:sortby]
+      end
       @redirect = true
     else
       @sortby = params[:sortby]
